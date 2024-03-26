@@ -2,16 +2,10 @@ import { getDiscountPrice } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductCard = ({
-  product: {
-    title,
-    description,
-    price,
-    thumbnail,
-    discountPercentage,
-    category,
-  },
-}) => {
+const ProductCard = ({ product }) => {
+  const { title, description, price, thumbnail, discountPercentage, category } =
+    product;
+
   return (
     <div>
       <div class="relative delay-150 w-180px lg:w-[270px] h-[205px] lg:h-[310px] bg-[#f8f8f8] bg-cover bg-center transition-all duration-3000 ease-in-out transform">

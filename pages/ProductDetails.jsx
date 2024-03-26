@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ProductDetails = ({
-  product: {
+const ProductDetails = ({ product }) => {
+  const {
     title,
     description,
     price,
@@ -13,8 +13,8 @@ const ProductDetails = ({
     category,
     images,
     rating,
-  },
-}) => {
+  } = product;
+
   const intRating = Math.round(rating);
   console.log(intRating);
   return (
