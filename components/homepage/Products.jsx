@@ -6,8 +6,8 @@ const Products = () => {
 
   return (
     <main>
-      <section class="w-11/12 lg:w-10/12 max-w-7xl mx-auto py-10">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:grid-cols-4 my-4 lg:my-10">
+      <section className="w-11/12 lg:w-10/12 max-w-7xl mx-auto py-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:grid-cols-4 my-4 lg:my-10">
           {allProducts.map((product) => {
             return <ProductCard key={product.id} product={product} />;
           })}
