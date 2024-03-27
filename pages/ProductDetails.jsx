@@ -1,3 +1,4 @@
+import Rating from "@/components/common/Rating";
 import { getDiscountPrice } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,21 +44,7 @@ const ProductDetails = ({ product }) => {
             >
               {product?.category}
             </Link>
-            <div className="mt-3 flex items-center justify-start gap-1">
-              {Array(intRating)
-                .fill("")
-                ?.map((_, i) => {
-                  return (
-                    <Image
-                      key={i}
-                      src="/svg/star.svg"
-                      width={20}
-                      height={20}
-                      alt="star"
-                    />
-                  );
-                })}
-            </div>
+            <Rating inRating={intRating} />
             <hr className="my-5 bg-black" />
 
             <div>
